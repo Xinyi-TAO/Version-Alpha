@@ -1,14 +1,16 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform player;
+    public GameObject player;
+    public float timeOffset;
+    public Vector3 posOffset;
 
+    private Vector3 velocity;
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(player.position.x, player.position.y,-10f); //transform 当前物体的transform
+        transform.position = Vector3.SmoothDamp(transform.position, player.transform.position + posOffset, ref velocity, timeOffset);
+    
     }
 }
