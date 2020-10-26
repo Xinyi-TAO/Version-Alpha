@@ -52,7 +52,7 @@ public class PlayerMovement : MonoBehaviour
       }
       //horizontalMovement = moveSpeed * Time.deltaTime;
 
-      
+
       if (Input.GetButtonDown("Jump") && isGrounded){
         isJumping = true;
       }
