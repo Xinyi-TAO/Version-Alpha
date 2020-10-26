@@ -66,7 +66,7 @@ public class PlayerMovement : MonoBehaviour
 
     void FixedUpdate()
     {
-      float horizontalMovement = Input.GetAxis("Horizontal")* moveSpeed * Time.deltaTime;
+      float horizontalMovement = Input.GetAxis("Horizontal")* moveSpeed * Time.fixedDeltaTime;
       MovePlayer(horizontalMovement);
     }
 
